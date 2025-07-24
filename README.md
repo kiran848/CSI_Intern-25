@@ -1,4 +1,9 @@
-# ☁️ Celebal Technologies – Cloud Infra & Security Internship `2024`
+<p align="center">
+  <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fcelebaltech.net%2F&psig=AOvVaw2rcKmz9nIXG2mJQhDQH9b9&ust=1753433996414000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCPjfh4SR1Y4DFQAAAAAdAAAAABAE" alt="Celebal Technologies Logo" width="250"/>
+</p>
+
+
+# ☁️ Celebal Technologies – Cloud Infra & Security Internship `2025`
 > 📁 **Weekly Assignment Repository**  
 > 🧑‍💻 Domain: Cloud Infrastructure & Security | 🔐 Platform: Microsoft Azure  
 > 🏢 Organization: **Celebal Technologies**  
