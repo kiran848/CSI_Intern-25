@@ -1,0 +1,2 @@
+Install-WindowsFeature -Name Web-Server -IncludeManagementTools
+Set-Content -Path "C:\inetpub\wwwroot\index.html" -Value "<h1>This is IIS on $(hostname)</h1>"
