@@ -1,0 +1,80 @@
+{
+    "name": "onprem-vm",
+    "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Compute/virtualMachines/onprem-vm",
+    "type": "Microsoft.Compute/virtualMachines",
+    "location": "centralus",
+    "properties": {
+        "hardwareProfile": {
+            "vmSize": "Standard_B1s"
+        },
+        "provisioningState": "Succeeded",
+        "vmId": "9d3369f6-a447-4435-a063-9fd0c223f1ca",
+        "additionalCapabilities": {
+            "hibernationEnabled": false
+        },
+        "storageProfile": {
+            "imageReference": {
+                "publisher": "MicrosoftWindowsServer",
+                "offer": "WindowsServer",
+                "sku": "2022-datacenter-azure-edition",
+                "version": "latest",
+                "exactVersion": "20348.3932.250705"
+            },
+            "osDisk": {
+                "osType": "Windows",
+                "name": "onprem-vm_OsDisk_1_532520d21de1497ea007cf8305b52982",
+                "createOption": "FromImage",
+                "caching": "ReadWrite",
+                "managedDisk": {
+                    "storageAccountType": "Premium_LRS",
+                    "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Compute/disks/onprem-vm_OsDisk_1_532520d21de1497ea007cf8305b52982"
+                },
+                "deleteOption": "Delete",
+                "diskSizeGB": 127
+            },
+            "dataDisks": []
+        },
+        "osProfile": {
+            "computerName": "onprem-vm",
+            "adminUsername": "kiran_k",
+            "windowsConfiguration": {
+                "provisionVMAgent": true,
+                "enableAutomaticUpdates": true,
+                "patchSettings": {
+                    "patchMode": "AutomaticByOS",
+                    "assessmentMode": "ImageDefault",
+                    "enableHotpatching": false
+                }
+            },
+            "secrets": [],
+            "allowExtensionOperations": true,
+            "requireGuestProvisionSignal": true
+        },
+        "securityProfile": {
+            "uefiSettings": {
+                "secureBootEnabled": true,
+                "vTpmEnabled": true
+            },
+            "securityType": "TrustedLaunch"
+        },
+        "networkProfile": {
+            "networkInterfaces": [
+                {
+                    "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/networkInterfaces/onprem-vm372_z1",
+                    "properties": {
+                        "deleteOption": "Delete"
+                    }
+                }
+            ]
+        },
+        "diagnosticsProfile": {
+            "bootDiagnostics": {
+                "enabled": true
+            }
+        }
+    },
+    "zones": [
+        "1"
+    ],
+    "apiVersion": "2021-03-01"
+}

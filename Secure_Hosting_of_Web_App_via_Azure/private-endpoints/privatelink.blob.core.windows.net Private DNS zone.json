@@ -1,0 +1,19 @@
+
+{
+    "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/privateDnsZones/privatelink.blob.core.windows.net",
+    "name": "privatelink.blob.core.windows.net",
+    "type": "Microsoft.Network/privateDnsZones",
+    "etag": "6bee43f1-213e-4a03-b7e2-4e05677b6f0f",
+    "location": "global",
+    "tags": {},
+    "properties": {
+        "maxNumberOfRecordSets": 25000,
+        "maxNumberOfVirtualNetworkLinks": 1000,
+        "maxNumberOfVirtualNetworkLinksWithRegistration": 100,
+        "numberOfRecordSets": 2,
+        "numberOfVirtualNetworkLinks": 3,
+        "numberOfVirtualNetworkLinksWithRegistration": 0,
+        "provisioningState": "Succeeded"
+    },
+    "apiVersion": "2018-09-01"
+}

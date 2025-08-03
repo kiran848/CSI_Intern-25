@@ -1,0 +1,10 @@
+
+azureuser@DNS-VM:~$ nslookup webapp00-gvh6dndqbma3e0gh.centralus-01.privatelink.azurewebsites.net 127.0.0.1
+Server:         127.0.0.1
+Address:        127.0.0.1#53
+
+Non-authoritative answer:
+Name:   webapp00-gvh6dndqbma3e0gh.centralus-01.privatelink.azurewebsites.net
+Address: 10.1.1.4
+
+azureuser@DNS-VM:~$

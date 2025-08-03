@@ -1,0 +1,264 @@
+
+{
+    "name": "DNS-VM-nsg",
+    "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/networkSecurityGroups/DNS-VM-nsg",
+    "etag": "W/\"e3b8b9ca-6af8-45f4-a150-6e7c23c36e06\"",
+    "type": "Microsoft.Network/networkSecurityGroups",
+    "location": "centralus",
+    "properties": {
+        "provisioningState": "Succeeded",
+        "resourceGuid": "0889c65f-495d-4823-8ade-50e751c88eca",
+        "securityRules": [
+            {
+                "name": "SSH",
+                "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/networkSecurityGroups/DNS-VM-nsg/securityRules/SSH",
+                "etag": "W/\"e3b8b9ca-6af8-45f4-a150-6e7c23c36e06\"",
+                "type": "Microsoft.Network/networkSecurityGroups/securityRules",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "protocol": "TCP",
+                    "sourcePortRange": "*",
+                    "destinationPortRange": "22",
+                    "sourceAddressPrefix": "*",
+                    "destinationAddressPrefix": "*",
+                    "access": "Allow",
+                    "priority": 100,
+                    "direction": "Inbound",
+                    "sourcePortRanges": [],
+                    "destinationPortRanges": [],
+                    "sourceAddressPrefixes": [],
+                    "destinationAddressPrefixes": []
+                }
+            },
+            {
+                "name": "AllowAnyCustom53Outbound",
+                "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/networkSecurityGroups/DNS-VM-nsg/securityRules/AllowAnyCustom53Outbound",
+                "etag": "W/\"e3b8b9ca-6af8-45f4-a150-6e7c23c36e06\"",
+                "type": "Microsoft.Network/networkSecurityGroups/securityRules",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "protocol": "UDP",
+                    "sourcePortRange": "*",
+                    "destinationPortRange": "53",
+                    "sourceAddressPrefix": "*",
+                    "destinationAddressPrefix": "VirtualNetwork",
+                    "access": "Allow",
+                    "priority": 110,
+                    "direction": "Outbound",
+                    "sourcePortRanges": [],
+                    "destinationPortRanges": [],
+                    "sourceAddressPrefixes": [],
+                    "destinationAddressPrefixes": []
+                }
+            },
+            {
+                "name": "AllowAnyCustom80Outbound",
+                "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/networkSecurityGroups/DNS-VM-nsg/securityRules/AllowAnyCustom80Outbound",
+                "etag": "W/\"e3b8b9ca-6af8-45f4-a150-6e7c23c36e06\"",
+                "type": "Microsoft.Network/networkSecurityGroups/securityRules",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "protocol": "TCP",
+                    "sourcePortRange": "*",
+                    "destinationPortRange": "80",
+                    "sourceAddressPrefix": "*",
+                    "destinationAddressPrefix": "VirtualNetwork",
+                    "access": "Allow",
+                    "priority": 120,
+                    "direction": "Outbound",
+                    "sourcePortRanges": [],
+                    "destinationPortRanges": [],
+                    "sourceAddressPrefixes": [],
+                    "destinationAddressPrefixes": []
+                }
+            },
+            {
+                "name": "AllowAnyCustom443Outbound",
+                "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/networkSecurityGroups/DNS-VM-nsg/securityRules/AllowAnyCustom443Outbound",
+                "etag": "W/\"e3b8b9ca-6af8-45f4-a150-6e7c23c36e06\"",
+                "type": "Microsoft.Network/networkSecurityGroups/securityRules",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "protocol": "TCP",
+                    "sourcePortRange": "*",
+                    "destinationPortRange": "443",
+                    "sourceAddressPrefix": "*",
+                    "destinationAddressPrefix": "VirtualNetwork",
+                    "access": "Allow",
+                    "priority": 100,
+                    "direction": "Outbound",
+                    "sourcePortRanges": [],
+                    "destinationPortRanges": [],
+                    "sourceAddressPrefixes": [],
+                    "destinationAddressPrefixes": []
+                }
+            },
+            {
+                "name": "AllowAnyCustomAnyOutbound",
+                "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/networkSecurityGroups/DNS-VM-nsg/securityRules/AllowAnyCustomAnyOutbound",
+                "etag": "W/\"e3b8b9ca-6af8-45f4-a150-6e7c23c36e06\"",
+                "type": "Microsoft.Network/networkSecurityGroups/securityRules",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "protocol": "*",
+                    "sourcePortRange": "*",
+                    "destinationPortRange": "*",
+                    "sourceAddressPrefix": "*",
+                    "destinationAddressPrefix": "AzureCloud",
+                    "access": "Allow",
+                    "priority": 130,
+                    "direction": "Outbound",
+                    "sourcePortRanges": [],
+                    "destinationPortRanges": [],
+                    "sourceAddressPrefixes": [],
+                    "destinationAddressPrefixes": []
+                }
+            }
+        ],
+        "defaultSecurityRules": [
+            {
+                "name": "AllowVnetInBound",
+                "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/networkSecurityGroups/DNS-VM-nsg/defaultSecurityRules/AllowVnetInBound",
+                "etag": "W/\"e3b8b9ca-6af8-45f4-a150-6e7c23c36e06\"",
+                "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "description": "Allow inbound traffic from all VMs in VNET",
+                    "protocol": "*",
+                    "sourcePortRange": "*",
+                    "destinationPortRange": "*",
+                    "sourceAddressPrefix": "VirtualNetwork",
+                    "destinationAddressPrefix": "VirtualNetwork",
+                    "access": "Allow",
+                    "priority": 65000,
+                    "direction": "Inbound",
+                    "sourcePortRanges": [],
+                    "destinationPortRanges": [],
+                    "sourceAddressPrefixes": [],
+                    "destinationAddressPrefixes": []
+                }
+            },
+            {
+                "name": "AllowAzureLoadBalancerInBound",
+                "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/networkSecurityGroups/DNS-VM-nsg/defaultSecurityRules/AllowAzureLoadBalancerInBound",
+                "etag": "W/\"e3b8b9ca-6af8-45f4-a150-6e7c23c36e06\"",
+                "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "description": "Allow inbound traffic from azure load balancer",
+                    "protocol": "*",
+                    "sourcePortRange": "*",
+                    "destinationPortRange": "*",
+                    "sourceAddressPrefix": "AzureLoadBalancer",
+                    "destinationAddressPrefix": "*",
+                    "access": "Allow",
+                    "priority": 65001,
+                    "direction": "Inbound",
+                    "sourcePortRanges": [],
+                    "destinationPortRanges": [],
+                    "sourceAddressPrefixes": [],
+                    "destinationAddressPrefixes": []
+                }
+            },
+            {
+                "name": "DenyAllInBound",
+                "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/networkSecurityGroups/DNS-VM-nsg/defaultSecurityRules/DenyAllInBound",
+                "etag": "W/\"e3b8b9ca-6af8-45f4-a150-6e7c23c36e06\"",
+                "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "description": "Deny all inbound traffic",
+                    "protocol": "*",
+                    "sourcePortRange": "*",
+                    "destinationPortRange": "*",
+                    "sourceAddressPrefix": "*",
+                    "destinationAddressPrefix": "*",
+                    "access": "Deny",
+                    "priority": 65500,
+                    "direction": "Inbound",
+                    "sourcePortRanges": [],
+                    "destinationPortRanges": [],
+                    "sourceAddressPrefixes": [],
+                    "destinationAddressPrefixes": []
+                }
+            },
+            {
+                "name": "AllowVnetOutBound",
+                "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/networkSecurityGroups/DNS-VM-nsg/defaultSecurityRules/AllowVnetOutBound",
+                "etag": "W/\"e3b8b9ca-6af8-45f4-a150-6e7c23c36e06\"",
+                "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "description": "Allow outbound traffic from all VMs to all VMs in VNET",
+                    "protocol": "*",
+                    "sourcePortRange": "*",
+                    "destinationPortRange": "*",
+                    "sourceAddressPrefix": "VirtualNetwork",
+                    "destinationAddressPrefix": "VirtualNetwork",
+                    "access": "Allow",
+                    "priority": 65000,
+                    "direction": "Outbound",
+                    "sourcePortRanges": [],
+                    "destinationPortRanges": [],
+                    "sourceAddressPrefixes": [],
+                    "destinationAddressPrefixes": []
+                }
+            },
+            {
+                "name": "AllowInternetOutBound",
+                "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/networkSecurityGroups/DNS-VM-nsg/defaultSecurityRules/AllowInternetOutBound",
+                "etag": "W/\"e3b8b9ca-6af8-45f4-a150-6e7c23c36e06\"",
+                "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "description": "Allow outbound traffic from all VMs to Internet",
+                    "protocol": "*",
+                    "sourcePortRange": "*",
+                    "destinationPortRange": "*",
+                    "sourceAddressPrefix": "*",
+                    "destinationAddressPrefix": "Internet",
+                    "access": "Allow",
+                    "priority": 65001,
+                    "direction": "Outbound",
+                    "sourcePortRanges": [],
+                    "destinationPortRanges": [],
+                    "sourceAddressPrefixes": [],
+                    "destinationAddressPrefixes": []
+                }
+            },
+            {
+                "name": "DenyAllOutBound",
+                "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/networkSecurityGroups/DNS-VM-nsg/defaultSecurityRules/DenyAllOutBound",
+                "etag": "W/\"e3b8b9ca-6af8-45f4-a150-6e7c23c36e06\"",
+                "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "description": "Deny all outbound traffic",
+                    "protocol": "*",
+                    "sourcePortRange": "*",
+                    "destinationPortRange": "*",
+                    "sourceAddressPrefix": "*",
+                    "destinationAddressPrefix": "*",
+                    "access": "Deny",
+                    "priority": 65500,
+                    "direction": "Outbound",
+                    "sourcePortRanges": [],
+                    "destinationPortRanges": [],
+                    "sourceAddressPrefixes": [],
+                    "destinationAddressPrefixes": []
+                }
+            }
+        ],
+        "networkInterfaces": [
+            {
+                "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/networkInterfaces/dns-vm269_z1"
+            }
+        ],
+        "subnets": [
+            {
+                "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/virtualNetworks/vnet-hub/subnets/DNSSubnet"
+            }
+        ]
+    },
+    "apiVersion": "2023-09-01"
+}

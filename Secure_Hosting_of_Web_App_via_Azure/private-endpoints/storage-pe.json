@@ -1,0 +1,53 @@
+
+{
+    "name": "storage-pe",
+    "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/privateEndpoints/storage-pe",
+    "etag": "W/\"5c77a332-a7b1-4a7c-8157-20a364be0349\"",
+    "type": "Microsoft.Network/privateEndpoints",
+    "location": "centralus",
+    "tags": {},
+    "properties": {
+        "provisioningState": "Succeeded",
+        "resourceGuid": "edb04e79-452f-4102-8c32-48c13dd5bbbe",
+        "privateLinkServiceConnections": [
+            {
+                "name": "storage-pe_9ce185be-0510-46c9-81c1-15723b5290c6",
+                "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/privateEndpoints/storage-pe/privateLinkServiceConnections/storage-pe_9ce185be-0510-46c9-81c1-15723b5290c6",
+                "etag": "W/\"5c77a332-a7b1-4a7c-8157-20a364be0349\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "privateLinkServiceId": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourcegroups/rg-project/providers/Microsoft.Storage/storageAccounts/storageprivatedemo",
+                    "groupIds": [
+                        "blob"
+                    ],
+                    "privateLinkServiceConnectionState": {
+                        "status": "Approved",
+                        "description": "Auto-Approved",
+                        "actionsRequired": "None"
+                    }
+                },
+                "type": "Microsoft.Network/privateEndpoints/privateLinkServiceConnections"
+            }
+        ],
+        "manualPrivateLinkServiceConnections": [],
+        "customNetworkInterfaceName": "",
+        "subnet": {
+            "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/virtualNetworks/vnet-storage/subnets/storage-subnet"
+        },
+        "ipConfigurations": [],
+        "networkInterfaces": [
+            {
+                "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/networkInterfaces/storage-pe.nic.8a1abd8c-10e0-4aa4-8986-43e42a194ae5"
+            }
+        ],
+        "customDnsConfigs": [
+            {
+                "fqdn": "storageprivatedemo.blob.core.windows.net",
+                "ipAddresses": [
+                    "10.2.1.4"
+                ]
+            }
+        ]
+    },
+    "apiVersion": "2021-05-01"
+}

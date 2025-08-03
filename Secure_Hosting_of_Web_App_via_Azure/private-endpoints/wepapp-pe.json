@@ -1,0 +1,45 @@
+{
+    "name": "webapp-pe",
+    "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/privateEndpoints/webapp-pe",
+    "etag": "W/\"f495a362-2fea-4f50-aef2-0ec30b81c744\"",
+    "type": "Microsoft.Network/privateEndpoints",
+    "location": "centralus",
+    "tags": {},
+    "properties": {
+        "provisioningState": "Succeeded",
+        "resourceGuid": "e5ffd2ed-d95a-47c7-bbc2-857a9a0d61b2",
+        "privateLinkServiceConnections": [
+            {
+                "name": "webapp-pe",
+                "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/privateEndpoints/webapp-pe/privateLinkServiceConnections/webapp-pe",
+                "etag": "W/\"f495a362-2fea-4f50-aef2-0ec30b81c744\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "privateLinkServiceId": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Web/sites/webapp00",
+                    "groupIds": [
+                        "sites"
+                    ],
+                    "privateLinkServiceConnectionState": {
+                        "status": "Approved",
+                        "description": "",
+                        "actionsRequired": "None"
+                    }
+                },
+                "type": "Microsoft.Network/privateEndpoints/privateLinkServiceConnections"
+            }
+        ],
+        "manualPrivateLinkServiceConnections": [],
+        "customNetworkInterfaceName": "webapp-pe-nic",
+        "subnet": {
+            "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/virtualNetworks/vnet-web/subnets/web-subnet"
+        },
+        "ipConfigurations": [],
+        "networkInterfaces": [
+            {
+                "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/networkInterfaces/webapp-pe-nic"
+            }
+        ],
+        "customDnsConfigs": []
+    },
+    "apiVersion": "2021-05-01"
+}

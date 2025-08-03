@@ -1,0 +1,91 @@
+
+{
+    "sku": {
+        "name": "Standard_RAGRS",
+        "tier": "Standard"
+    },
+    "kind": "StorageV2",
+    "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Storage/storageAccounts/storageprivatedemo",
+    "name": "storageprivatedemo",
+    "type": "Microsoft.Storage/storageAccounts",
+    "location": "centralus",
+    "tags": {},
+    "properties": {
+        "dnsEndpointType": "Standard",
+        "defaultToOAuthAuthentication": false,
+        "publicNetworkAccess": "Disabled",
+        "keyCreationTime": {
+            "key1": "2025-08-03T09:44:18.5442510Z",
+            "key2": "2025-08-03T09:44:18.5442510Z"
+        },
+        "allowCrossTenantReplication": false,
+        "privateEndpointConnections": [
+            {
+                "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Storage/storageAccounts/storageprivatedemo/privateEndpointConnections/storageprivatedemo.1b07efa4-4f70-4e4a-9f52-ad8aa8a4d1dd",
+                "name": "storageprivatedemo.1b07efa4-4f70-4e4a-9f52-ad8aa8a4d1dd",
+                "type": "Microsoft.Storage/storageAccounts/privateEndpointConnections",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "privateEndpoint": {
+                        "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/privateEndpoints/storage-pe"
+                    },
+                    "privateLinkServiceConnectionState": {
+                        "status": "Approved",
+                        "description": "Auto-Approved",
+                        "actionRequired": "None"
+                    }
+                }
+            }
+        ],
+        "minimumTlsVersion": "TLS1_2",
+        "allowBlobPublicAccess": false,
+        "allowSharedKeyAccess": true,
+        "largeFileSharesState": "Enabled",
+        "networkAcls": {
+            "bypass": "AzureServices",
+            "virtualNetworkRules": [],
+            "ipRules": [],
+            "defaultAction": "Deny"
+        },
+        "supportsHttpsTrafficOnly": true,
+        "encryption": {
+            "requireInfrastructureEncryption": false,
+            "services": {
+                "file": {
+                    "keyType": "Account",
+                    "enabled": true,
+                    "lastEnabledTime": "2025-08-03T09:44:18.5442510Z"
+                },
+                "blob": {
+                    "keyType": "Account",
+                    "enabled": true,
+                    "lastEnabledTime": "2025-08-03T09:44:18.5442510Z"
+                }
+            },
+            "keySource": "Microsoft.Storage"
+        },
+        "accessTier": "Hot",
+        "provisioningState": "Succeeded",
+        "creationTime": "2025-08-03T09:44:18.4192513Z",
+        "primaryEndpoints": {
+            "dfs": "https://storageprivatedemo.dfs.core.windows.net/",
+            "web": "https://storageprivatedemo.z19.web.core.windows.net/",
+            "blob": "https://storageprivatedemo.blob.core.windows.net/",
+            "queue": "https://storageprivatedemo.queue.core.windows.net/",
+            "table": "https://storageprivatedemo.table.core.windows.net/",
+            "file": "https://storageprivatedemo.file.core.windows.net/"
+        },
+        "primaryLocation": "centralus",
+        "statusOfPrimary": "available",
+        "secondaryLocation": "eastus2",
+        "statusOfSecondary": "available",
+        "secondaryEndpoints": {
+            "dfs": "https://storageprivatedemo-secondary.dfs.core.windows.net/",
+            "web": "https://storageprivatedemo-secondary.z19.web.core.windows.net/",
+            "blob": "https://storageprivatedemo-secondary.blob.core.windows.net/",
+            "queue": "https://storageprivatedemo-secondary.queue.core.windows.net/",
+            "table": "https://storageprivatedemo-secondary.table.core.windows.net/"
+        }
+    },
+    "apiVersion": "2022-05-01"
+}

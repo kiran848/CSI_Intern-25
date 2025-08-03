@@ -1,0 +1,19 @@
+
+{
+    "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/privateDnsZones/privatelink.azurewebsites.net",
+    "name": "privatelink.azurewebsites.net",
+    "type": "Microsoft.Network/privateDnsZones",
+    "etag": "afdbc322-e7be-4961-8852-945ab29921dc",
+    "location": "global",
+    "tags": {},
+    "properties": {
+        "maxNumberOfRecordSets": 25000,
+        "maxNumberOfVirtualNetworkLinks": 1000,
+        "maxNumberOfVirtualNetworkLinksWithRegistration": 100,
+        "numberOfRecordSets": 3,
+        "numberOfVirtualNetworkLinks": 2,
+        "numberOfVirtualNetworkLinksWithRegistration": 0,
+        "provisioningState": "Succeeded"
+    },
+    "apiVersion": "2018-09-01"
+}

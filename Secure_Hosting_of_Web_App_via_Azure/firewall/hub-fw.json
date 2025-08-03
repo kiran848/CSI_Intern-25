@@ -1,0 +1,131 @@
+
+{
+    "name": "hub-fw",
+    "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/azureFirewalls/hub-fw",
+    "etag": "W/\"18e51178-f1b3-40b4-8bbc-df4fee1712c4\"",
+    "type": "Microsoft.Network/azureFirewalls",
+    "location": "centralus",
+    "tags": {},
+    "zones": [
+        "1",
+        "2",
+        "3"
+    ],
+    "properties": {
+        "provisioningState": "Succeeded",
+        "sku": {
+            "name": "AZFW_VNet",
+            "tier": "Standard"
+        },
+        "threatIntelMode": "Alert",
+        "additionalProperties": {},
+        "ipConfigurations": [
+            {
+                "name": "firewallip",
+                "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/azureFirewalls/hub-fw/azureFirewallIpConfigurations/firewallip",
+                "etag": "W/\"18e51178-f1b3-40b4-8bbc-df4fee1712c4\"",
+                "type": "Microsoft.Network/azureFirewalls/azureFirewallIpConfigurations",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "privateIPAddress": "10.0.1.4",
+                    "privateIPAllocationMethod": "Dynamic",
+                    "publicIPAddress": {
+                        "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/publicIPAddresses/firewallip"
+                    },
+                    "subnet": {
+                        "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/virtualNetworks/vnet-hub/subnets/AzureFirewallSubnet"
+                    }
+                }
+            }
+        ],
+        "networkRuleCollections": [
+            {
+                "name": "allow-web-traffic",
+                "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/azureFirewalls/hub-fw/networkRuleCollections/allow-web-traffic",
+                "etag": "W/\"18e51178-f1b3-40b4-8bbc-df4fee1712c4\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "priority": 100,
+                    "action": {
+                        "type": "Allow"
+                    },
+                    "rules": [
+                        {
+                            "name": "Allow-DNS",
+                            "protocols": [
+                                "UDP"
+                            ],
+                            "sourceAddresses": [
+                                "10.1.0.0/16"
+                            ],
+                            "destinationAddresses": [
+                                "10.0.3.4"
+                            ],
+                            "sourceIpGroups": [],
+                            "destinationIpGroups": [],
+                            "destinationFqdns": [],
+                            "destinationPorts": [
+                                "53"
+                            ]
+                        },
+                        {
+                            "name": "http-allow",
+                            "protocols": [
+                                "TCP"
+                            ],
+                            "sourceAddresses": [
+                                "10.1.0.0/16"
+                            ],
+                            "destinationAddresses": [
+                                "10.1.1.4"
+                            ],
+                            "sourceIpGroups": [],
+                            "destinationIpGroups": [],
+                            "destinationFqdns": [],
+                            "destinationPorts": [
+                                "443"
+                            ]
+                        }
+                    ]
+                },
+                "type": "Microsoft.Network/azureFirewalls/networkRuleCollections"
+            },
+            {
+                "name": "ONPREM",
+                "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/azureFirewalls/hub-fw/networkRuleCollections/ONPREM",
+                "etag": "W/\"18e51178-f1b3-40b4-8bbc-df4fee1712c4\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "priority": 110,
+                    "action": {
+                        "type": "Allow"
+                    },
+                    "rules": [
+                        {
+                            "name": "ONPREMTOWEBAPP",
+                            "protocols": [
+                                "TCP"
+                            ],
+                            "sourceAddresses": [
+                                "10.3.0.0/16"
+                            ],
+                            "destinationAddresses": [
+                                "10.1.1.4"
+                            ],
+                            "sourceIpGroups": [],
+                            "destinationIpGroups": [],
+                            "destinationFqdns": [],
+                            "destinationPorts": [
+                                "443"
+                            ]
+                        }
+                    ]
+                },
+                "type": "Microsoft.Network/azureFirewalls/networkRuleCollections"
+            }
+        ],
+        "applicationRuleCollections": [],
+        "natRuleCollections": []
+    },
+    "apiVersion": "2020-05-01"
+}

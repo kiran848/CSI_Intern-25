@@ -1,0 +1,88 @@
+
+{
+    "name": "DNS-VM",
+    "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/RG-PROJECT/providers/Microsoft.Compute/virtualMachines/DNS-VM",
+    "type": "Microsoft.Compute/virtualMachines",
+    "location": "centralus",
+    "properties": {
+        "hardwareProfile": {
+            "vmSize": "Standard_B1s"
+        },
+        "provisioningState": "Succeeded",
+        "vmId": "16dcd79e-6bc0-4921-8b53-44d9aa57be8b",
+        "additionalCapabilities": {
+            "hibernationEnabled": false
+        },
+        "storageProfile": {
+            "imageReference": {
+                "publisher": "canonical",
+                "offer": "ubuntu-24_04-lts",
+                "sku": "server",
+                "version": "latest",
+                "exactVersion": "24.04.202507080"
+            },
+            "osDisk": {
+                "osType": "Linux",
+                "name": "DNS-VM_OsDisk_1_686baeeb08184b2b8572015f5601891c",
+                "createOption": "FromImage",
+                "caching": "ReadWrite",
+                "managedDisk": {
+                    "storageAccountType": "Premium_LRS",
+                    "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/RG-PROJECT/providers/Microsoft.Compute/disks/DNS-VM_OsDisk_1_686baeeb08184b2b8572015f5601891c"
+                },
+                "deleteOption": "Delete",
+                "diskSizeGB": 30
+            },
+            "dataDisks": []
+        },
+        "osProfile": {
+            "computerName": "DNS-VM",
+            "adminUsername": "azureuser",
+            "linuxConfiguration": {
+                "disablePasswordAuthentication": true,
+                "ssh": {
+                    "publicKeys": [
+                        {
+                            "path": "/home/azureuser/.ssh/authorized_keys",
+                            "keyData": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCTiptggPO6yZczTK+NbceDtcDoETns3rWWqG/vSbiMIhruSUCUyXNCDu0CJGcEmDyoAj9DZCdqFQc0Pe7BjG5jDhsP3iNlsXhatuWjTrpRv3tuuegw3mpQshDveNXHLmEjTcfSWsb5ngF82As3I+7E57fbzk9pd7PXgKZ0SG4eq1wsJgFjk+ODFP6b212NpL+XYPYiS9uqELOzn4LKbb6h3KKl2Ly98SXYomkzoA/61FJLP7wptAC45SRpiWxo3WATlh0MZRMDK8sva7WvkyPDZ4EYBkHjkBaJ4/IiC8+U8Hl+mlV68XVt5KIoNMq4EKEwJRnJHW3MBuLpo+euj4xzhXHtzrNaL+cfT2wy30HjktqeXMDF4LG0wmWB9p9+26fZNRkbMUiQ5DVkZdJgC+QLkW3meRyizg2CpwfK7xSXpZt44sazTqsCBpRkBURir1oo2Qt1t7wtoABnw7smbY4oF/IaqaRXvZth49hz00W7RLjxysGz4adlPqkxdpUHdq0= generated-by-azure"
+                        }
+                    ]
+                },
+                "provisionVMAgent": true,
+                "patchSettings": {
+                    "patchMode": "ImageDefault",
+                    "assessmentMode": "ImageDefault"
+                }
+            },
+            "secrets": [],
+            "allowExtensionOperations": true,
+            "requireGuestProvisionSignal": true
+        },
+        "securityProfile": {
+            "uefiSettings": {
+                "secureBootEnabled": true,
+                "vTpmEnabled": true
+            },
+            "securityType": "TrustedLaunch"
+        },
+        "networkProfile": {
+            "networkInterfaces": [
+                {
+                    "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/networkInterfaces/dns-vm269_z1",
+                    "properties": {
+                        "deleteOption": "Delete"
+                    }
+                }
+            ]
+        },
+        "diagnosticsProfile": {
+            "bootDiagnostics": {
+                "enabled": true
+            }
+        }
+    },
+    "zones": [
+        "1"
+    ],
+    "apiVersion": "2021-03-01"
+}

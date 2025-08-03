@@ -1,0 +1,60 @@
+
+{
+    "name": "storage-pe.nic.8a1abd8c-10e0-4aa4-8986-43e42a194ae5",
+    "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/networkInterfaces/storage-pe.nic.8a1abd8c-10e0-4aa4-8986-43e42a194ae5",
+    "etag": "W/\"fe9c3c8b-8e88-41e3-b04a-aabd880ef784\"",
+    "tags": {},
+    "properties": {
+        "provisioningState": "Succeeded",
+        "resourceGuid": "2c3cb44c-cfeb-401b-9323-01a703a2fd3e",
+        "ipConfigurations": [
+            {
+                "name": "privateEndpointIpConfig.8ab30af5-4232-4c79-a194-728caf464083",
+                "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/networkInterfaces/storage-pe.nic.8a1abd8c-10e0-4aa4-8986-43e42a194ae5/ipConfigurations/privateEndpointIpConfig.8ab30af5-4232-4c79-a194-728caf464083",
+                "etag": "W/\"fe9c3c8b-8e88-41e3-b04a-aabd880ef784\"",
+                "type": "Microsoft.Network/networkInterfaces/ipConfigurations",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "privateIPAddress": "10.2.1.4",
+                    "privateIPAllocationMethod": "Dynamic",
+                    "subnet": {
+                        "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/virtualNetworks/vnet-storage/subnets/storage-subnet"
+                    },
+                    "primary": true,
+                    "privateIPAddressVersion": "IPv4",
+                    "privateLinkConnectionProperties": {
+                        "groupId": "blob",
+                        "requiredMemberName": "blob",
+                        "fqdns": [
+                            "storageprivatedemo.blob.core.windows.net"
+                        ]
+                    }
+                }
+            }
+        ],
+        "dnsSettings": {
+            "dnsServers": [],
+            "appliedDnsServers": [],
+            "internalDomainNameSuffix": "wuf1kkuidbhu3ardgqyjjavfuf.gx.internal.cloudapp.net"
+        },
+        "macAddress": "",
+        "enableAcceleratedNetworking": false,
+        "vnetEncryptionSupported": false,
+        "enableIPForwarding": false,
+        "disableTcpStateTracking": false,
+        "hostedWorkloads": [],
+        "tapConfigurations": [],
+        "privateEndpoint": {
+            "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/privateEndpoints/storage-pe"
+        },
+        "nicType": "Standard",
+        "allowPort25Out": false,
+        "auxiliaryMode": "None",
+        "auxiliarySku": "None"
+    },
+    "type": "Microsoft.Network/networkInterfaces",
+    "location": "centralus",
+    "managedBy": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/privateEndpoints/storage-pe",
+    "kind": "Regular",
+    "apiVersion": "2023-11-01"
+}

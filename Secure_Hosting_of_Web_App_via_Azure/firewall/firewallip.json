@@ -1,0 +1,30 @@
+{
+    "name": "firewallip",
+    "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/publicIPAddresses/firewallip",
+    "etag": "W/\"55a27e65-06aa-4f2c-be6f-39cfa4a0fd7b\"",
+    "location": "centralus",
+    "tags": {},
+    "zones": [
+        "1",
+        "2",
+        "3"
+    ],
+    "properties": {
+        "provisioningState": "Succeeded",
+        "resourceGuid": "e9b138b3-5f34-4635-b410-0bc72d2ca8f8",
+        "ipAddress": "48.214.246.170",
+        "publicIPAddressVersion": "IPv4",
+        "publicIPAllocationMethod": "Static",
+        "idleTimeoutInMinutes": 4,
+        "ipTags": [],
+        "ipConfiguration": {
+            "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/azureFirewalls/hub-fw/azureFirewallIpConfigurations/firewallip"
+        }
+    },
+    "type": "Microsoft.Network/publicIPAddresses",
+    "sku": {
+        "name": "Standard",
+        "tier": "Regional"
+    },
+    "apiVersion": "2022-05-01"
+}

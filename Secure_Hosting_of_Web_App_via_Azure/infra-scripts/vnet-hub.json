@@ -1,0 +1,227 @@
+
+{
+    "name": "vnet-hub",
+    "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/virtualNetworks/vnet-hub",
+    "etag": "W/\"f5df0582-3037-49b6-9396-9c65e47b11b5\"",
+    "type": "Microsoft.Network/virtualNetworks",
+    "location": "centralus",
+    "tags": {},
+    "properties": {
+        "provisioningState": "Succeeded",
+        "resourceGuid": "945f9c2e-0a00-4009-b685-4079647c5c2d",
+        "addressSpace": {
+            "addressPrefixes": [
+                "10.0.0.0/16"
+            ]
+        },
+        "encryption": {
+            "enabled": false,
+            "enforcement": "AllowUnencrypted"
+        },
+        "subnets": [
+            {
+                "name": "default",
+                "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/virtualNetworks/vnet-hub/subnets/default",
+                "etag": "W/\"f5df0582-3037-49b6-9396-9c65e47b11b5\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "addressPrefixes": [
+                        "10.0.0.0/24"
+                    ],
+                    "delegations": [],
+                    "privateEndpointNetworkPolicies": "Disabled",
+                    "privateLinkServiceNetworkPolicies": "Enabled"
+                },
+                "type": "Microsoft.Network/virtualNetworks/subnets"
+            },
+            {
+                "name": "AzureFirewallSubnet",
+                "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/virtualNetworks/vnet-hub/subnets/AzureFirewallSubnet",
+                "etag": "W/\"f5df0582-3037-49b6-9396-9c65e47b11b5\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "addressPrefixes": [
+                        "10.0.1.0/26"
+                    ],
+                    "ipConfigurations": [
+                        {
+                            "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/RG-PROJECT/providers/Microsoft.Network/azureFirewalls/HUB-FW/azureFirewallIpConfigurations/FIREWALLIP"
+                        }
+                    ],
+                    "delegations": [],
+                    "privateEndpointNetworkPolicies": "Disabled",
+                    "privateLinkServiceNetworkPolicies": "Enabled"
+                },
+                "type": "Microsoft.Network/virtualNetworks/subnets"
+            },
+            {
+                "name": "AppGatewaySubnet",
+                "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/virtualNetworks/vnet-hub/subnets/AppGatewaySubnet",
+                "etag": "W/\"f5df0582-3037-49b6-9396-9c65e47b11b5\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "addressPrefixes": [
+                        "10.0.2.0/24"
+                    ],
+                    "delegations": [],
+                    "privateEndpointNetworkPolicies": "Disabled",
+                    "privateLinkServiceNetworkPolicies": "Enabled"
+                },
+                "type": "Microsoft.Network/virtualNetworks/subnets"
+            },
+            {
+                "name": "AzureBastionSubnet",
+                "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/virtualNetworks/vnet-hub/subnets/AzureBastionSubnet",
+                "etag": "W/\"f5df0582-3037-49b6-9396-9c65e47b11b5\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "addressPrefix": "10.0.1.64/26",
+                    "ipConfigurations": [
+                        {
+                            "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/RG-PROJECT/providers/Microsoft.Network/bastionHosts/VNET-HUB-BASTION/bastionHostIpConfigurations/IPCONF"
+                        }
+                    ],
+                    "delegations": [],
+                    "privateEndpointNetworkPolicies": "Disabled",
+                    "privateLinkServiceNetworkPolicies": "Enabled"
+                },
+                "type": "Microsoft.Network/virtualNetworks/subnets"
+            },
+            {
+                "name": "DNSSubnet",
+                "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/virtualNetworks/vnet-hub/subnets/DNSSubnet",
+                "etag": "W/\"f5df0582-3037-49b6-9396-9c65e47b11b5\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "addressPrefixes": [
+                        "10.0.3.0/24"
+                    ],
+                    "networkSecurityGroup": {
+                        "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/networkSecurityGroups/DNS-VM-nsg"
+                    },
+                    "ipConfigurations": [
+                        {
+                            "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/RG-PROJECT/providers/Microsoft.Network/networkInterfaces/DNS-VM269_Z1/ipConfigurations/IPCONFIG1"
+                        }
+                    ],
+                    "delegations": [],
+                    "privateEndpointNetworkPolicies": "Disabled",
+                    "privateLinkServiceNetworkPolicies": "Enabled"
+                },
+                "type": "Microsoft.Network/virtualNetworks/subnets"
+            }
+        ],
+        "virtualNetworkPeerings": [
+            {
+                "name": "web-to-hub",
+                "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/virtualNetworks/vnet-hub/virtualNetworkPeerings/web-to-hub",
+                "etag": "W/\"f5df0582-3037-49b6-9396-9c65e47b11b5\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "resourceGuid": "976d1413-bb65-0ba6-13b2-391005a4eb68",
+                    "peeringState": "Connected",
+                    "peeringSyncLevel": "FullyInSync",
+                    "remoteVirtualNetwork": {
+                        "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/virtualNetworks/vnet-web"
+                    },
+                    "allowVirtualNetworkAccess": true,
+                    "allowForwardedTraffic": true,
+                    "allowGatewayTransit": false,
+                    "useRemoteGateways": false,
+                    "doNotVerifyRemoteGateways": false,
+                    "peerCompleteVnets": true,
+                    "remoteAddressSpace": {
+                        "addressPrefixes": [
+                            "10.1.0.0/16"
+                        ]
+                    },
+                    "remoteVirtualNetworkAddressSpace": {
+                        "addressPrefixes": [
+                            "10.1.0.0/16"
+                        ]
+                    },
+                    "remoteVirtualNetworkEncryption": {
+                        "enabled": false,
+                        "enforcement": "AllowUnencrypted"
+                    },
+                    "routeServiceVips": {}
+                },
+                "type": "Microsoft.Network/virtualNetworks/virtualNetworkPeerings"
+            },
+            {
+                "name": "storage-to-hub",
+                "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/virtualNetworks/vnet-hub/virtualNetworkPeerings/storage-to-hub",
+                "etag": "W/\"f5df0582-3037-49b6-9396-9c65e47b11b5\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "resourceGuid": "beea979b-1288-0e46-34a6-7449f0fef988",
+                    "peeringState": "Connected",
+                    "peeringSyncLevel": "FullyInSync",
+                    "remoteVirtualNetwork": {
+                        "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/virtualNetworks/vnet-storage"
+                    },
+                    "allowVirtualNetworkAccess": true,
+                    "allowForwardedTraffic": true,
+                    "allowGatewayTransit": false,
+                    "useRemoteGateways": false,
+                    "doNotVerifyRemoteGateways": false,
+                    "peerCompleteVnets": true,
+                    "remoteAddressSpace": {
+                        "addressPrefixes": [
+                            "10.2.0.0/16"
+                        ]
+                    },
+                    "remoteVirtualNetworkAddressSpace": {
+                        "addressPrefixes": [
+                            "10.2.0.0/16"
+                        ]
+                    },
+                    "remoteVirtualNetworkEncryption": {
+                        "enabled": false,
+                        "enforcement": "AllowUnencrypted"
+                    },
+                    "routeServiceVips": {}
+                },
+                "type": "Microsoft.Network/virtualNetworks/virtualNetworkPeerings"
+            },
+            {
+                "name": "onprem-to-hub",
+                "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/virtualNetworks/vnet-hub/virtualNetworkPeerings/onprem-to-hub",
+                "etag": "W/\"f5df0582-3037-49b6-9396-9c65e47b11b5\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "resourceGuid": "468196d3-08c1-0517-28e8-c00fcaf107f6",
+                    "peeringState": "Connected",
+                    "peeringSyncLevel": "FullyInSync",
+                    "remoteVirtualNetwork": {
+                        "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/virtualNetworks/onprem-vnet"
+                    },
+                    "allowVirtualNetworkAccess": true,
+                    "allowForwardedTraffic": true,
+                    "allowGatewayTransit": false,
+                    "useRemoteGateways": false,
+                    "doNotVerifyRemoteGateways": false,
+                    "peerCompleteVnets": true,
+                    "remoteAddressSpace": {
+                        "addressPrefixes": [
+                            "10.3.0.0/16"
+                        ]
+                    },
+                    "remoteVirtualNetworkAddressSpace": {
+                        "addressPrefixes": [
+                            "10.3.0.0/16"
+                        ]
+                    },
+                    "remoteVirtualNetworkEncryption": {
+                        "enabled": false,
+                        "enforcement": "AllowUnencrypted"
+                    },
+                    "routeServiceVips": {}
+                },
+                "type": "Microsoft.Network/virtualNetworks/virtualNetworkPeerings"
+            }
+        ],
+        "enableDdosProtection": false
+    },
+    "apiVersion": "2024-01-01"
+}

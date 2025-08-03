@@ -1,0 +1,38 @@
+
+{
+    "name": "rt-web",
+    "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/routeTables/rt-web",
+    "etag": "W/\"25a71b72-cf48-416d-afe5-bc8ee6e32d99\"",
+    "type": "Microsoft.Network/routeTables",
+    "location": "centralus",
+    "tags": {},
+    "properties": {
+        "provisioningState": "Succeeded",
+        "resourceGuid": "b67a4d33-e909-4511-94cd-8dea7cb76543",
+        "disableBgpRoutePropagation": false,
+        "routes": [
+            {
+                "name": "force-internet",
+                "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/routeTables/rt-web/routes/force-internet",
+                "etag": "W/\"25a71b72-cf48-416d-afe5-bc8ee6e32d99\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "addressPrefix": "0.0.0.0/0",
+                    "nextHopType": "VirtualAppliance",
+                    "nextHopIpAddress": "10.0.1.4",
+                    "hasBgpOverride": false
+                },
+                "type": "Microsoft.Network/routeTables/routes"
+            }
+        ],
+        "subnets": [
+            {
+                "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/virtualNetworks/vnet-web/subnets/web-subnet"
+            },
+            {
+                "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/virtualNetworks/vnet-storage/subnets/storage-subnet"
+            }
+        ]
+    },
+    "apiVersion": "2019-09-01"
+}

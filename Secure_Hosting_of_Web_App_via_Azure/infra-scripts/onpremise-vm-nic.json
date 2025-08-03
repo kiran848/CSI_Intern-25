@@ -1,0 +1,55 @@
+
+{
+    "name": "onprem-vm372_z1",
+    "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/networkInterfaces/onprem-vm372_z1",
+    "etag": "W/\"502c0328-a8c1-4974-a412-67e964910dad\"",
+    "properties": {
+        "provisioningState": "Succeeded",
+        "resourceGuid": "5f630c43-177b-436b-abee-c2dc385c5910",
+        "ipConfigurations": [
+            {
+                "name": "ipconfig1",
+                "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/networkInterfaces/onprem-vm372_z1/ipConfigurations/ipconfig1",
+                "etag": "W/\"502c0328-a8c1-4974-a412-67e964910dad\"",
+                "type": "Microsoft.Network/networkInterfaces/ipConfigurations",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "privateIPAddress": "10.3.2.4",
+                    "privateIPAllocationMethod": "Dynamic",
+                    "subnet": {
+                        "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/virtualNetworks/onprem-vnet/subnets/onprem-subnet"
+                    },
+                    "primary": true,
+                    "privateIPAddressVersion": "IPv4"
+                }
+            }
+        ],
+        "dnsSettings": {
+            "dnsServers": [],
+            "appliedDnsServers": [],
+            "internalDomainNameSuffix": "5ufn3uwbaipelhtnqb1k3dk11d.gx.internal.cloudapp.net"
+        },
+        "macAddress": "60-45-BD-33-FB-E8",
+        "enableAcceleratedNetworking": false,
+        "vnetEncryptionSupported": false,
+        "enableIPForwarding": false,
+        "disableTcpStateTracking": false,
+        "networkSecurityGroup": {
+            "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/networkSecurityGroups/onprem-vm-nsg"
+        },
+        "primary": true,
+        "virtualMachine": {
+            "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Compute/virtualMachines/onprem-vm"
+        },
+        "hostedWorkloads": [],
+        "tapConfigurations": [],
+        "nicType": "Standard",
+        "allowPort25Out": false,
+        "auxiliaryMode": "None",
+        "auxiliarySku": "None"
+    },
+    "type": "Microsoft.Network/networkInterfaces",
+    "location": "centralus",
+    "kind": "Regular",
+    "apiVersion": "2023-11-01"
+}

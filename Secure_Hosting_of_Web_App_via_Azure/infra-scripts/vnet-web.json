@@ -1,0 +1,127 @@
+
+{
+    "name": "vnet-web",
+    "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/virtualNetworks/vnet-web",
+    "etag": "W/\"43c643ab-cb0f-403b-ae2f-a1ee29e4010d\"",
+    "type": "Microsoft.Network/virtualNetworks",
+    "location": "centralus",
+    "tags": {},
+    "properties": {
+        "provisioningState": "Succeeded",
+        "resourceGuid": "0332883d-b165-4baf-a537-796961d8b745",
+        "addressSpace": {
+            "addressPrefixes": [
+                "10.1.0.0/16"
+            ]
+        },
+        "encryption": {
+            "enabled": false,
+            "enforcement": "AllowUnencrypted"
+        },
+        "dhcpOptions": {
+            "dnsServers": [
+                "10.0.3.4"
+            ]
+        },
+        "subnets": [
+            {
+                "name": "integration-subnet",
+                "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/virtualNetworks/vnet-web/subnets/integration-subnet",
+                "etag": "W/\"43c643ab-cb0f-403b-ae2f-a1ee29e4010d\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "addressPrefix": "10.1.2.0/24",
+                    "serviceEndpoints": [],
+                    "delegations": [
+                        {
+                            "name": "delegation",
+                            "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/virtualNetworks/vnet-web/subnets/integration-subnet/delegations/delegation",
+                            "etag": "W/\"43c643ab-cb0f-403b-ae2f-a1ee29e4010d\"",
+                            "properties": {
+                                "provisioningState": "Succeeded",
+                                "serviceName": "Microsoft.Web/serverfarms",
+                                "actions": [
+                                    "Microsoft.Network/virtualNetworks/subnets/action"
+                                ]
+                            },
+                            "type": "Microsoft.Network/virtualNetworks/subnets/delegations"
+                        }
+                    ],
+                    "privateEndpointNetworkPolicies": "Disabled",
+                    "privateLinkServiceNetworkPolicies": "Enabled"
+                },
+                "type": "Microsoft.Network/virtualNetworks/subnets"
+            },
+            {
+                "name": "web-subnet",
+                "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/virtualNetworks/vnet-web/subnets/web-subnet",
+                "etag": "W/\"43c643ab-cb0f-403b-ae2f-a1ee29e4010d\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "addressPrefixes": [
+                        "10.1.1.0/24"
+                    ],
+                    "routeTable": {
+                        "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/routeTables/rt-web"
+                    },
+                    "ipConfigurations": [
+                        {
+                            "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/RG-PROJECT/providers/Microsoft.Network/networkInterfaces/WEBAPP-PE-NIC/ipConfigurations/PRIVATEENDPOINTIPCONFIG.D3AF191D-580E-40B7-B7D1-742F66BD73BF"
+                        }
+                    ],
+                    "privateEndpoints": [
+                        {
+                            "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/RG-PROJECT/providers/Microsoft.Network/privateEndpoints/WEBAPP-PE"
+                        }
+                    ],
+                    "delegations": [],
+                    "purpose": "PrivateEndpoints",
+                    "privateEndpointNetworkPolicies": "Disabled",
+                    "privateLinkServiceNetworkPolicies": "Enabled",
+                    "defaultOutboundAccess": false
+                },
+                "type": "Microsoft.Network/virtualNetworks/subnets"
+            }
+        ],
+        "virtualNetworkPeerings": [
+            {
+                "name": "hub-to-web",
+                "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/virtualNetworks/vnet-web/virtualNetworkPeerings/hub-to-web",
+                "etag": "W/\"43c643ab-cb0f-403b-ae2f-a1ee29e4010d\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "resourceGuid": "976d1413-bb65-0ba6-13b2-391005a4eb68",
+                    "peeringState": "Connected",
+                    "peeringSyncLevel": "FullyInSync",
+                    "remoteVirtualNetwork": {
+                        "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/virtualNetworks/vnet-hub"
+                    },
+                    "allowVirtualNetworkAccess": true,
+                    "allowForwardedTraffic": true,
+                    "allowGatewayTransit": false,
+                    "useRemoteGateways": false,
+                    "doNotVerifyRemoteGateways": false,
+                    "peerCompleteVnets": true,
+                    "remoteAddressSpace": {
+                        "addressPrefixes": [
+                            "10.0.0.0/16"
+                        ]
+                    },
+                    "remoteVirtualNetworkAddressSpace": {
+                        "addressPrefixes": [
+                            "10.0.0.0/16"
+                        ]
+                    },
+                    "remoteVirtualNetworkEncryption": {
+                        "enabled": false,
+                        "enforcement": "AllowUnencrypted"
+                    },
+                    "routeServiceVips": {}
+                },
+                "type": "Microsoft.Network/virtualNetworks/virtualNetworkPeerings"
+            }
+        ],
+        "enableDdosProtection": false
+    },
+    "apiVersion": "2024-01-01"
+}

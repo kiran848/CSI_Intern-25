@@ -1,0 +1,61 @@
+
+{
+    "name": "webapp-pe-nic",
+    "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/networkInterfaces/webapp-pe-nic",
+    "etag": "W/\"606de554-7d69-437e-b4f4-98a57e1180af\"",
+    "tags": {},
+    "properties": {
+        "provisioningState": "Succeeded",
+        "resourceGuid": "a2ce43dd-4be9-4587-8397-7288f03139bf",
+        "ipConfigurations": [
+            {
+                "name": "privateEndpointIpConfig.d3af191d-580e-40b7-b7d1-742f66bd73bf",
+                "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/networkInterfaces/webapp-pe-nic/ipConfigurations/privateEndpointIpConfig.d3af191d-580e-40b7-b7d1-742f66bd73bf",
+                "etag": "W/\"606de554-7d69-437e-b4f4-98a57e1180af\"",
+                "type": "Microsoft.Network/networkInterfaces/ipConfigurations",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "privateIPAddress": "10.1.1.4",
+                    "privateIPAllocationMethod": "Dynamic",
+                    "subnet": {
+                        "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/virtualNetworks/vnet-web/subnets/web-subnet"
+                    },
+                    "primary": true,
+                    "privateIPAddressVersion": "IPv4",
+                    "privateLinkConnectionProperties": {
+                        "groupId": "sites",
+                        "requiredMemberName": "sites",
+                        "fqdns": [
+                            "webapp00-gvh6dndqbma3e0gh.centralus-01.azurewebsites.net",
+                            "webapp00-gvh6dndqbma3e0gh.scm.centralus-01.azurewebsites.net"
+                        ]
+                    }
+                }
+            }
+        ],
+        "dnsSettings": {
+            "dnsServers": [],
+            "appliedDnsServers": [],
+            "internalDomainNameSuffix": "hwedea1fwgxuxjjxpfuwdwfxif.gx.internal.cloudapp.net"
+        },
+        "macAddress": "",
+        "enableAcceleratedNetworking": false,
+        "vnetEncryptionSupported": false,
+        "enableIPForwarding": false,
+        "disableTcpStateTracking": false,
+        "hostedWorkloads": [],
+        "tapConfigurations": [],
+        "privateEndpoint": {
+            "id": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/privateEndpoints/webapp-pe"
+        },
+        "nicType": "Standard",
+        "allowPort25Out": false,
+        "auxiliaryMode": "None",
+        "auxiliarySku": "None"
+    },
+    "type": "Microsoft.Network/networkInterfaces",
+    "location": "centralus",
+    "managedBy": "/subscriptions/e03d0a78-387a-4dc7-804b-92303d810db9/resourceGroups/rg-project/providers/Microsoft.Network/privateEndpoints/webapp-pe",
+    "kind": "Regular",
+    "apiVersion": "2023-11-01"
+}
