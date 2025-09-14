@@ -4,7 +4,7 @@
 
 The project uses a **Hub-and-Spoke network topology** in Azure to ensure **secure, private, and controlled access** to Web App and Storage resources.
 
-![Hub-and-Spoke Architecture](architecture/Architecture model.png)
+![Hub-and-Spoke Architecture](Secure_Hosting_of_Web_App_via_Azure/architecture/Architecture model.png)
 
 ### 🔹 Key Components
 
@@ -39,4 +39,5 @@ The project uses a **Hub-and-Spoke network topology** in Azure to ensure **secur
 > This architecture ensures a **secure, enterprise-grade network** for hosting Azure resources with controlled and private access.
 
 ---
+
 
